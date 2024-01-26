@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>
+            Wage Calculator
+        </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>
+            Calculate thine wage!
+        </h1>
+        <main>
+            <form>
+                <input type="text" name="wage" placeholder="Paycheck amount"/>
+                <fieldset>
+                    <legend>Paycheck frequency:</legend>
+                    <div>
+                        <input type="radio" id="frequencyChoice1" name="frequency" value="weekly" />
+                        <label for="frequencyChoice1">Weekly</label>
+                    
+                        <input type="radio" id="frequencyChoice2" name="frequency" value="biweekly" />
+                        <label for="frequencyChoice2">Bi-weekly (every other week)</label>
+                    
+                        <input type="radio" id="frequencyChoice3" name="frequency" value="bimonthly" checked/>
+                        <label for="frequencyChoice3">Bi-monthly (twice a month)</label>
+
+                        <input type="radio" id="frequencyChoice4" name="frequency" value="monthly" />
+                        <label for="frequencyChoice4">Monthly</label>
+
+                        <input type="radio" id="frequencyChoice5" name="frequency" value="annually" />
+                        <label for="frequencyChoice5">Annually</label>
+                    </div>
+                </fieldset>
+                <input type="submit" id="submit-button"/>
+            </form>
+            <output></output>
+        </main>
+    </body>
+    <script src="index.js"></script>
+</html>
