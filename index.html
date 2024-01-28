@@ -4,38 +4,40 @@
         <title>
             PayTickr
         </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-
-        <header>
-            <h1>
-                Because sometimes you just need a little extra motivation
-            </h1>
-        </header>
-        
         <main>
+            <header>
+                <h1>
+                    ...because sometimes you just need a little extra motivation
+                </h1>
+            </header>
+        
+
             <form>
-                <input type="text" name="wage" placeholder="Paycheck amount" required maxlength="12" pattern="\d+" />
+                <label for="wage">Paycheck amount: </label>
+                <input type="text" name="wage" required maxlength="12" pattern="\d+" />
                 <fieldset>
                     <legend>Paycheck frequency:</legend>
-                    <div>
-                        <input type="radio" id="frequencyChoice1" name="frequency" value="weekly" />
-                        <label for="frequencyChoice1">Weekly</label>
-                    
-                        <input type="radio" id="frequencyChoice2" name="frequency" value="biweekly" />
-                        <label for="frequencyChoice2">Bi-weekly (every other week)</label>
-                    
-                        <input type="radio" id="frequencyChoice3" name="frequency" value="bimonthly" checked/>
-                        <label for="frequencyChoice3">Bi-monthly (twice a month)</label>
-
-                        <input type="radio" id="frequencyChoice4" name="frequency" value="monthly" />
-                        <label for="frequencyChoice4">Monthly</label>
-
-                        <input type="radio" id="frequencyChoice5" name="frequency" value="annually" />
-                        <label for="frequencyChoice5">Annually</label>
-                    </div>
+                    <input type="radio" id="frequencyChoice1" name="frequency" value="weekly" />
+                    <label for="frequencyChoice1">Weekly</label>
+                    <br />
+                    <input type="radio" id="frequencyChoice2" name="frequency" value="biweekly" />
+                    <label for="frequencyChoice2">Bi-weekly (every other week)</label>
+                    <br />
+                    <input type="radio" id="frequencyChoice3" name="frequency" value="semimonthly" checked/>
+                    <label for="frequencyChoice3">Semi-monthly (twice a month)</label>
+                    <br />
+                    <input type="radio" id="frequencyChoice4" name="frequency" value="monthly" />
+                    <label for="frequencyChoice4">Monthly</label>
+                    <br />
+                    <input type="radio" id="frequencyChoice5" name="frequency" value="annually" />
+                    <label for="frequencyChoice5">Annually</label>
                 </fieldset>
                 <input type="submit" id="submit-button"/>
             </form>
@@ -45,5 +47,5 @@
     </body>
 
     <script src="index.js"></script>
-    
+
 </html>

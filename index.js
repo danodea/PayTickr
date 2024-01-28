@@ -6,7 +6,7 @@ const output = document.querySelector("output");
 const centisecondsInPayPeriod = {
   weekly: 1440000,
   biweekly: 2880000,
-  bimonthly: 3117600, // 4.33 work weeks per month
+  semimonthly: 3117600, // 4.33 work weeks per month
   monthly: 6235200,
   annually: 74880000,
 };

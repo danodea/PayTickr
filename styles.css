@@ -1,10 +1,76 @@
+:root {
+  /* thanks https://www.schemecolor.com/dollar-bill-color-scheme.php for some of these */
+  --black-olive: #3e3e3c;
+  --black-olive-tint: #777776;
+  --dirty-white: #e8e9c9;
+  --dollar-bill: #85bb65;
+  --sea-green: #228d57;
+  --nice-brown: #695649;
+  font-family: "Workbench", serif;
+}
+
 body {
-  max-width: 75%;
-  margin: auto;
-}
+  background-color: var(--dollar-bill);
+  color: var(--black-olive);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  justify-content: space-around;
 
-header {
-}
+  main {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
 
-main {
+    header {
+      text-align: center;
+    }
+
+    form {
+      border-radius: 5px;
+      border: 2px solid var(--black-olive-tint);
+      background-color: var(--dirty-white);
+      padding: 1.5rem;
+      /* width: 30%; */
+
+      input[type="text"] {
+        padding: 10px;
+        border: 1px solid var(--black-olive-tint);
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: inherit;
+        margin-bottom: 2rem;
+        width: 40%;
+      }
+
+      fieldset {
+        border-radius: 5px;
+        border: 2px solid var(--black-olive);
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        input {
+          margin-bottom: 6px;
+        }
+      }
+
+      input[type="submit"] {
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 10px;
+        border: none;
+        background-color: var(--sea-green);
+        color: #fff;
+        font-size: 16px;
+        font-family: inherit;
+        border-radius: 5px;
+        width: 40%;
+      }
+    }
+  }
 }
