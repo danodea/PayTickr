@@ -14,6 +14,8 @@ let counter = 0;
 let increment = 0;
 
 form.addEventListener("submit", (e) => {
+  counter = 0;
+  increment = 0;
   e.preventDefault();
   const formData = new FormData(form);
   increment =
