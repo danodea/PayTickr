@@ -10,17 +10,22 @@ const centisecondsInPayPeriod = {
   monthly: 6235200,
   annually: 74880000,
 };
+
 let counter = 0;
 let increment = 0;
+let interval;
 
 form.addEventListener("submit", (e) => {
+  if (interval) {
+    clearInterval(interval);
+  }
   counter = 0;
   increment = 0;
   e.preventDefault();
   const formData = new FormData(form);
   increment =
     +formData.get("wage") / centisecondsInPayPeriod[formData.get("frequency")];
-  setInterval(counterFunction, 100);
+  interval = setInterval(counterFunction, 100);
 });
 
 const counterFunction = () => {
