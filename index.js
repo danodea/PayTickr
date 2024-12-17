@@ -14,21 +14,30 @@ const centisecondsInPayPeriod = {
 let counter = 0;
 let increment = 0;
 let interval;
+let lastSubmitTime;
 
 form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   if (interval) {
     clearInterval(interval);
   }
+
   counter = 0;
   increment = 0;
-  e.preventDefault();
+
   const formData = new FormData(form);
+  lastSubmitTime = new Date();
+
   increment =
     +formData.get("wage") / centisecondsInPayPeriod[formData.get("frequency")];
+
   interval = setInterval(counterFunction, 100);
 });
 
 const counterFunction = () => {
   counter += increment;
-  output.innerHTML = counter.toFixed(2);
+  output.innerHTML = `You have made ${counter.toFixed(
+    2
+  )} since you sumbitted this form at ${lastSubmitTime}`;
 };

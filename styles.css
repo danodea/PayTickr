@@ -35,7 +35,6 @@ body {
       border: 2px solid var(--black-olive-tint);
       background-color: var(--dirty-white);
       padding: 1.5rem;
-      /* width: 30%; */
 
       input[type="text"] {
         padding: 10px;
@@ -69,7 +68,7 @@ body {
         font-size: 16px;
         font-family: inherit;
         border-radius: 5px;
-        width: 40%;
+        width: 100%;
       }
     }
   }
