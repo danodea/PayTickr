@@ -36,6 +36,10 @@ body {
       background-color: var(--dirty-white);
       padding: 1.5rem;
 
+      &.hidden {
+        display: none;
+      }
+
       input[type="text"] {
         padding: 10px;
         border: 1px solid var(--black-olive-tint);
