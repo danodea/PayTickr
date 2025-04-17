@@ -1,5 +1,7 @@
 const form = document.querySelector("form");
 const output = document.querySelector("output");
+const payCounter = document.querySelector("#pay-counter");
+const submitTime = document.querySelector("#submit-time");
 
 // each is seconds in that number of workdays multiplied by 10
 // since the interval is 1/10 of a second
@@ -25,9 +27,7 @@ const updateCounter = (currentTime) => {
 
   if (elapsed >= UPDATE_INTERVAL) {
     counter += increment * (elapsed / UPDATE_INTERVAL);
-    output.innerHTML = `You have made ${counter.toFixed(
-      2
-    )} since you submitted this form at ${lastSubmitTime}`;
+    payCounter.textContent = `$${counter.toFixed(2)}`;
     lastUpdateTime = currentTime;
   }
 
@@ -51,6 +51,8 @@ form.addEventListener("submit", (e) => {
   increment =
     +formData.get("wage") / centisecondsInPayPeriod[formData.get("frequency")];
   // form.classList.add("hidden");
+
+  submitTime.textContent = lastSubmitTime;
 
   animationFrameId = requestAnimationFrame(updateCounter);
 });
