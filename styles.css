@@ -41,10 +41,6 @@ body {
       background-color: var(--dirty-white);
       padding: 1.5rem;
 
-      &.hidden {
-        display: none;
-      }
-
       input[type="text"] {
         padding: 10px;
         border: 1px solid var(--black-olive-tint);
@@ -78,7 +74,12 @@ body {
         font-family: inherit;
         border-radius: 5px;
         width: 100%;
+        cursor: pointer;
       }
     }
   }
+}
+
+.hidden {
+  display: none;
 }

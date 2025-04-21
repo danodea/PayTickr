@@ -50,9 +50,10 @@ form.addEventListener("submit", (e) => {
 
   increment =
     +formData.get("wage") / centisecondsInPayPeriod[formData.get("frequency")];
-  // form.classList.add("hidden");
+  form.classList.add("hidden");
 
   submitTime.textContent = lastSubmitTime;
 
+  output.classList.remove("hidden");
   animationFrameId = requestAnimationFrame(updateCounter);
 });
