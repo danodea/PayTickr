@@ -6,16 +6,26 @@
   --dollar-bill: #85bb65;
   --sea-green: #228d57;
   --nice-brown: #695649;
+
   font-family: "Workbench", serif;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+.hidden {
+  display: none;
 }
 
 body {
   background-color: var(--dollar-bill);
   color: var(--black-olive);
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  padding-top: 5vh;
+  padding: 0;
   margin: 0;
   justify-content: space-around;
 
@@ -25,6 +35,7 @@ body {
     align-items: center;
     gap: 2rem;
     width: 80%;
+    padding: 5vh 0;
 
     img.logo {
       border-radius: 10%;
@@ -78,8 +89,4 @@ body {
       }
     }
   }
-}
-
-.hidden {
-  display: none;
 }
