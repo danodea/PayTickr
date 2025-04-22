@@ -1,0 +1,8 @@
+1. biweekly and semimonthly should use tooltips to explain
+2. remove label from paycheck input and stack the form better
+3. new logo
+4. mobile styling
+5. output should have button to reshow the form
+6. output should look better
+7. add option to change units "number of tacos earned" etc
+8. add other currencies?
