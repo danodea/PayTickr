@@ -62,6 +62,49 @@ body {
         width: 40%;
       }
 
+      .tooltip-icon {
+        display: inline-block;
+        cursor: help;
+        position: relative;
+        user-select: none;
+        outline: none;
+      }
+
+      .tooltip-icon::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem;
+        background-color: var(--black-olive);
+        color: var(--dirty-white);
+        border-radius: 5px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0.2s;
+        z-index: 1;
+      }
+
+      @media (hover: hover) {
+        .tooltip-icon:hover::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .tooltip-icon:focus::before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      label:focus-within .tooltip-icon::before {
+        opacity: 1;
+        visibility: visible;
+      }
+
       fieldset {
         border-radius: 5px;
         border: 2px solid var(--black-olive);
