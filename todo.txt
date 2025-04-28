@@ -6,3 +6,4 @@
 6. output should look better
 7. add option to change units "number of tacos earned" etc
 8. add other currencies?
+9. show how much they make a second/minute/etc
